@@ -49,6 +49,10 @@ body {
     font-family: 'Public Sans', sans-serif;
 }
 
+body.overlay {
+    overflow-y: hidden;
+}
+
 img {
     width: 100%;
 }
@@ -70,7 +74,6 @@ img {
     border-radius: 1.5em;
 }
 
-
 /* JavaScript classes */
 
 .leave {
@@ -81,19 +84,18 @@ img {
     transform: translateY(0);
 }
 
-
-
-
 /* MOBILE STYLES */
 
 header.header {
     background-color: var(--white);
     display: flex;
     padding-top: 0.4em;
+    border: 1px solid;
 }
 
 header.header  .flex-row {
     align-items: center;
+    position: relative;
 }
 
 header.header  .flex-row a.logo {
@@ -106,23 +108,28 @@ nav.navigation {
 }
 
 nav.navigation .toggler{
-    position: relative;
     display: flex;
     flex-direction: column;
     cursor: pointer;
+    transition: transform 0.3s ease-in;
 }
 
-nav.navigation .toggler .close {
+nav.navigation .close {
     position: absolute;
     top: 0;
-    right: 0;
+    right: 0.5em;
+    transform: translateY(-200%);
     background-image: url(../images/icon-close.svg);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
     width: 24px;
     height: 24px;
-    transform: translateY(-250%);
+    transition: transform 0.5s ease-in;
+}
+
+nav.navigation .close.arrive {
+    transform: translateY(0);
 }
 
 nav.navigation .toggler span.toggler-line {
@@ -134,15 +141,22 @@ nav.navigation .toggler span.toggler-line {
 
 header.header ul.menu-list {
     position: absolute;
-    top: 0;
+    top: 4em;
     left: 50%;
-    transform: translateX(-50%);
-    transform: translateY(-100%);
+    transform: translate(-50%, -150%);
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 1em 7em;
+    border-radius: 0.4em;
     border: 1px solid;
-    padding: 1em 5em;
+    background-color: var(--white);
+    z-index: 2;
+    transition: transform 0.4s ease-in;
+}
+
+header.header ul.menu-list.arrive {
+    transform: translate(-50%, 0);
 }
 
 header.header ul.menu-list li.menu-item {
@@ -152,3 +166,12 @@ header.header ul.menu-list li.menu-item {
 header.header .cta-button {
     display: none;
 }
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
