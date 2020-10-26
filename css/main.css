@@ -1,3 +1,153 @@
+/* Variables */
+
+/* ## Colors */
+
+:root {
+
+/* ### Primary */
+
+--dark-blue: #2d314d;
+--lime-green: #31d35c;
+--bright-cyan: #2bb7da;
+
+/* ### Neutral */
+
+--grayish-blue: #9698a6;
+--lightgrayish-blue: #f3f4f6;
+--very-light-gray: #fafafa;
+--white: #ffffff;
+
+}
+
+/* RESET */
+
+* {
+    box-sizing: border-box;
+}
+
+body,p,a,ul,li, h1{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+  
+a {
+    color: red;
+}
+  
+li {
+    list-style-type: none;
+}
+
+/* BASE STYLES */
+
 body {
-    background-color: #666;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    font-family: 'Public Sans', sans-serif;
+}
+
+img {
+    width: 100%;
+}
+
+.mainer {
+    padding: 1em;
+    width: 100%;
+}
+
+.flex-row {
+    display: flex;
+}
+
+.cta-button {
+    font-size: 0.95em;
+    font-weight: 700;
+    color: black;
+    padding: 1em 2em;
+    border-radius: 1.5em;
+}
+
+
+/* JavaScript classes */
+
+.leave {
+    transform: translateY(-200%);
+}
+
+.arrive {
+    transform: translateY(0);
+}
+
+
+
+
+/* MOBILE STYLES */
+
+header.header {
+    background-color: var(--white);
+    display: flex;
+    padding-top: 0.4em;
+}
+
+header.header  .flex-row {
+    align-items: center;
+}
+
+header.header  .flex-row a.logo {
+    line-height: 0;
+}
+
+nav.navigation {
+    margin-left: auto;
+}
+
+nav.navigation .toggler{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+nav.navigation .toggler .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url(../images/icon-close.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    transform: translateY(-200%);
+}
+
+nav.navigation .toggler span.toggler-line {
+    height: 1px;
+    width: 25px;
+    background-color: black;
+    margin: 3px;
+}
+
+header.header ul.menu-list {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transform: translateY(-100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid;
+    padding: 1em 5em;
+}
+
+header.header ul.menu-list li.menu-item {
+    margin: 0.5em 0;
+}
+
+header.header .cta-button {
+    display: none;
 }
