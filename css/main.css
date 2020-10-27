@@ -49,7 +49,7 @@ body {
     font-family: 'Public Sans', sans-serif;
 }
 
-body.overlay {
+body.overlay-active {
     overflow-y: hidden;
 }
 
@@ -66,11 +66,23 @@ img {
     display: flex;
 }
 
+.heading {
+    font-weight: 300;
+    text-align: center;
+}
+
+p.description {
+    color: var(--grayish-blue);
+    text-align: center;
+}
+
 .cta-button {
+    width: fit-content;
+    display: block;
     font-size: 0.95em;
     font-weight: 700;
     color: black;
-    padding: 1em 2em;
+    padding: 0.8em 2em;
     border-radius: 1.5em;
 }
 
@@ -86,11 +98,14 @@ img {
 
 /* MOBILE STYLES */
 
+/* header */
+
 header.header {
+    position: relative;
     background-color: var(--white);
     display: flex;
     padding-top: 0.4em;
-    border: 1px solid;
+    z-index: 10;
 }
 
 header.header  .flex-row {
@@ -149,7 +164,6 @@ header.header ul.menu-list {
     align-items: center;
     padding: 1em 7em;
     border-radius: 0.4em;
-    border: 1px solid;
     background-color: var(--white);
     z-index: 2;
     transition: transform 0.4s ease-in;
@@ -163,11 +177,16 @@ header.header ul.menu-list li.menu-item {
     margin: 0.5em 0;
 }
 
+header.header ul.menu-list li.menu-item a {
+    color: black;
+}
+
 header.header .cta-button {
     display: none;
 }
 
 .overlay {
+    display: none;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -175,3 +194,51 @@ header.header .cta-button {
     z-index: 1;
 }
 
+.overlay.active {
+    display: block;
+}
+
+/* showcase */
+
+
+
+.showcase img.showcase-cover {
+    position: absolute;
+    top: -4em;
+    left: 0;
+    width: 100%;
+    background-image: url(../images/bg-intro-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.showcase .showcase-content {
+    margin-top: 50vh;
+}
+
+.showcase .showcase-content h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+.showcase .showcase-content p {
+    margin-bottom: 2em;
+}
+
+.showcase .showcase-content .cta-button {
+    border: 1px solid;
+    margin: 0 auto;
+}
+
+
+
+
+/* Bigger mobile */
+
+@media screen and (min-width: 440px) {
+    
+.showcase img.showcase-cover {
+    top: -10em;
+}
+}
