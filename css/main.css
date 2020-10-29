@@ -65,6 +65,10 @@ h2 {
     font-size: 1.8em;
 }
 
+h3 {
+    font-size: 1.2em;
+}
+
 .mainer {
     padding: 1em;
     width: 100%;
@@ -78,6 +82,10 @@ h2 {
     font-weight: 300;
     text-align: center;
     color: var(--dark-blue);
+}
+
+h3.heading {
+    font-weight: 400;
 }
 
 p.description {
@@ -267,6 +275,36 @@ header.header .cta-button {
     margin-bottom: 5em;
 }
 
+/* Articles */
+
+.articles {
+    background-color: var(--very-light-gray);
+}
+
+.articles h2 {
+    font-size: 1.9em;
+    margin-top: 2.5em;
+    margin-bottom: 1.5em;
+}
+
+.articles .article-card img.article-img {
+    border-radius: 0.5em 0.5em 0 0;
+}
+
+.articles .article-card .article-text {
+    width: 90%;
+    margin: 3em auto;
+}
+
+.articles .article-card .article-text h3.heading, p.description {
+    text-align: start;
+}
+
+.articles .article-card span.subheading {
+    font-size: 0.8em;
+    display: block;
+    color: var(--grayish-blue);
+}
 
 /* Bigger mobile */
 
