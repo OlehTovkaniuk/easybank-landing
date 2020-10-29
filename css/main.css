@@ -81,9 +81,11 @@ p.description {
     display: block;
     font-size: 0.95em;
     font-weight: 700;
-    color: black;
+    color: White;
+    letter-spacing: 0.05em;
     padding: 0.8em 2em;
     border-radius: 1.5em;
+    background-image: linear-gradient(to right, var(--lime-green), var(--bright-cyan));
 }
 
 /* JavaScript classes */
@@ -227,7 +229,6 @@ header.header .cta-button {
 }
 
 .showcase .showcase-content .cta-button {
-    border: 1px solid;
     margin: 0 auto;
 }
 
