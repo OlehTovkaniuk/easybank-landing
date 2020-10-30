@@ -70,8 +70,10 @@ h3 {
 }
 
 .mainer {
-    padding: 1em;
     width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1em;
 }
 
 .flex-row {
@@ -134,8 +136,13 @@ header.header  .flex-row {
 }
 
 header.header  .flex-row a.logo {
-    line-height: 0;
+    display: block;
     width: 50%;
+    line-height: 0;
+}
+
+header.header  .flex-row a.logo img{
+    max-width: 200px;
 }
 
 nav.navigation {
@@ -224,19 +231,23 @@ header.header .cta-button {
     background-color: var(--very-light-gray);
 }
 
-.showcase img.showcase-cover {
-    position: absolute;
-    top: -4em;
-    left: 0;
+.showcase .showcase-bg {
     width: 100%;
+    height: 50vh;
     background-image: url(../images/bg-intro-mobile.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
+.showcase img.showcase-cover {
+    position: absolute;
+    top: -4em;
+    left: 0;
+    width: 100%;
+}
+
 .showcase .showcase-content {
-    margin-top: 50vh;
     margin-bottom: 5em;
 }
 
@@ -265,6 +276,18 @@ header.header .cta-button {
     font-size: 1.9em;
 }
 
+.options .options-list {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.options .option-card {
+    margin: 0 auto;
+    min-width: 250px;
+    max-width: 320px;
+}
+
 .options .option-card .option-img {
     width: 5em;
     display: block;
@@ -287,6 +310,17 @@ header.header .cta-button {
     margin-bottom: 1.5em;
 }
 
+.articles .articles-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.articles .article-card {
+    max-width: 320px;
+    min-width: 250px;
+    margin: 0 auto;
+}
+
 .articles .article-card img.article-img {
     display: block;
     width: 90%;
@@ -299,7 +333,8 @@ header.header .cta-button {
     margin: 1.5em auto;
 }
 
-.articles .article-card .article-text h3.heading, p.description {
+.articles .article-card .article-text h3.heading, 
+.articles .article-card .article-text p.description {
     text-align: start;
 }
 
@@ -322,7 +357,7 @@ footer.footer a.logo {
 
 footer.footer a.logo img {
     display: block;
-    width: 50%;
+    min-width: 50%;
     margin: 0 auto;
 }
 
@@ -360,11 +395,91 @@ footer.footer span {
     margin-bottom: 3em;
 }
 
+/* MEDIA QUERIES */
+
 /* Bigger mobile */
 
 @media screen and (min-width: 440px) {
     
-.showcase img.showcase-cover {
-    top: -10em;
+    .showcase .showcase-bg {
+        height: 55vh;
+    }
+
+    .showcase img.showcase-cover {
+        top: -8em;
+    }
+
+    .showcase .showcase-content {
+        margin-top: 3em;
+    }
 }
+
+/* Tablet */
+
+
+@media screen and (min-width: 768px) {
+    header.header {
+        position: relative;
+        background-color: var(--white);
+        display: flex;
+        padding-top: 0.4em;
+        z-index: 10;
+    }
+    
+    header.header  .flex-row {
+        align-items: center;
+        position: relative;
+    }
+
+    header.header  .flex-row a.logo {
+        width: 25%;
+    }
+
+    header.header  .flex-row a.logo img {
+        max-width: 230px;
+    }
+    
+    nav.navigation {
+        margin: 0;
+        width: auto;
+        margin-left: auto;
+    }
+    
+    nav.navigation .toggle-btns{
+        display: none;
+    }
+    
+    header.header ul.menu-list {
+        position: static;
+        transform: none;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0;
+        border-radius: 0;
+        z-index: 0;
+    }
+    
+    header.header ul.menu-list li.menu-item {
+        margin: 0.5em 0.5em;
+    }
+    
+    header.header .cta-button {
+        display: block;
+        font-size: 0.8em;
+        letter-spacing: 0.05em;
+        padding: 0.8em 2em;
+        margin-left: auto;
+    }
+
+    .showcase img.showcase-cover {
+        top: -15em;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .mainer {
+        min-width: 1150px;
+    }
 }
