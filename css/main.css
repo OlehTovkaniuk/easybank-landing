@@ -71,7 +71,7 @@ h3 {
 
 .mainer {
     width: 100%;
-    max-width: 960px;
+    max-width: 540px;
     margin: 0 auto;
     padding: 1em;
 }
@@ -205,7 +205,7 @@ header.header ul.menu-list li.menu-item {
 }
 
 header.header ul.menu-list li.menu-item a {
-    color: black;
+    color: var(--dark-blue);
 }
 
 header.header .cta-button {
@@ -226,43 +226,33 @@ header.header .cta-button {
 }
 
 /* showcase */
-
 .showcase {
     background-color: var(--very-light-gray);
 }
 
 .showcase .showcase-bg {
-    width: 100%;
-    height: 50vh;
-    background-image: url(../images/bg-intro-mobile.svg);
+    height: 45vh;
+    background-image: url(../images/image-mockups.png), url(../images/bg-intro-mobile.svg);
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
-.showcase img.showcase-cover {
-    position: absolute;
-    top: -4em;
-    left: 0;
-    width: 100%;
+    background-position: 50% 100%, 100% 60%;
+    background-size: 90%, cover;
 }
 
 .showcase .showcase-content {
-    margin-bottom: 5em;
+    padding-top: 1em;
 }
 
 .showcase .showcase-content h1 {
-    margin-bottom: 0.5em;
+    margin-bottom: 1rem;
 }
 
 .showcase .showcase-content p {
-    margin-bottom: 2em;
+    margin-bottom: 1rem;
 }
 
 .showcase .showcase-content .cta-button {
-    margin: 0 auto;
+    margin: 0 auto 2rem;
 }
-
 
 /* Options */
 
@@ -397,27 +387,15 @@ footer.footer span {
 
 /* MEDIA QUERIES */
 
-/* Bigger mobile */
-
-@media screen and (min-width: 440px) {
-    
-    .showcase .showcase-bg {
-        height: 55vh;
-    }
-
-    .showcase img.showcase-cover {
-        top: -8em;
-    }
-
-    .showcase .showcase-content {
-        margin-top: 3em;
-    }
-}
-
 /* Tablet */
 
 
 @media screen and (min-width: 768px) {
+
+    .mainer {
+        max-width: 720px;
+    }
+
     header.header {
         position: relative;
         background-color: var(--white);
@@ -464,6 +442,10 @@ footer.footer span {
     header.header ul.menu-list li.menu-item {
         margin: 0.5em 0.5em;
     }
+
+    header.header ul.menu-list li.menu-item a {
+        color: var(--grayish-blue);
+    }
     
     header.header .cta-button {
         display: block;
@@ -473,13 +455,19 @@ footer.footer span {
         margin-left: auto;
     }
 
-    .showcase img.showcase-cover {
-        top: -15em;
+    .showcase .showcase-bg {
+        background-position: 50% 100%, 100% 70%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .mainer {
+        max-width: 960px;
     }
 }
 
 @media screen and (min-width: 1200px) {
     .mainer {
-        min-width: 1150px;
+        max-width: 1140px;
     }
 }
