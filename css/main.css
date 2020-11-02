@@ -464,10 +464,64 @@ footer.footer span {
     .mainer {
         max-width: 960px;
     }
+
+    .showcase {
+        position: relative;
+    }
+
+    .showcase .showcase-content{
+        width: 50%;
+        height: 500px;
+    }
+
+    .showcase .showcase-content h1.heading {
+        text-align: start;
+        font-size: 3em;
+    }
+    .showcase .showcase-content p.description {
+        margin-top: 2em;
+        text-align: start;
+    }
+
+    .showcase .showcase-content .cta-button{
+        margin: 5em auto 0 0;
+    }
+
+    .showcase .showcase-bg {
+        position: absolute;
+        background-image: url(../images/image-mockups.png), url(../images/bg-intro-desktop.svg);
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 110%;
+        background-position: 50% -150px, 20% 0;
+        background-size: 90%, cover;
+        z-index: 10;
+    }
+    
 }
 
 @media screen and (min-width: 1200px) {
     .mainer {
         max-width: 1140px;
     }
+
+    .options .option-card {
+        margin: 0 auto;
+        max-width: 250px;
+    }
+
+    .options .mainer > p.description {
+        width: 60%;
+    }
+
+    .options .option-card img.option-img {
+        margin: 3em 0 1em;
+    }
+
+    .options h1.heading,
+    .options h3.heading,
+    .options p.description {
+        text-align: start;
+    } 
 }
