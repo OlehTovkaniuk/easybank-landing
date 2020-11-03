@@ -311,11 +311,25 @@ header.header .cta-button {
     margin: 0 auto;
 }
 
-.articles .article-card img.article-img {
-    display: block;
-    width: 90%;
+.articles .article-card .article-img {
+    height: 200px;
     margin: 0 auto;
-    border-radius: 0.5em 0.5em 0 0;
+    border-radius: 0.3em 0.3em 0 0;
+    background-size: cover;
+    background-position: center;
+}
+
+.articles .article-card .article-img.one{
+    background-image: url(../images/image-currency.jpg);
+}
+.articles .article-card .article-img.two{
+    background-image: url(../images/image-restaurant.jpg);
+}
+.articles .article-card .article-img.three{
+    background-image: url(../images/image-plane.jpg);
+}
+.articles .article-card .article-img.four{
+    background-image: url(../images/image-confetti.jpg);
 }
 
 .articles .article-card .article-text {
@@ -326,6 +340,14 @@ header.header .cta-button {
 .articles .article-card .article-text h3.heading, 
 .articles .article-card .article-text p.description {
     text-align: start;
+}
+
+.articles .article-card .article-text h3.heading {
+    font-size: 1.1em;
+}
+
+.articles .article-card .article-text p.description {
+    font-size: 0.9em;
 }
 
 .articles .article-card span.subheading {
@@ -524,4 +546,16 @@ footer.footer span {
     .options p.description {
         text-align: start;
     } 
+
+    .articles .mainer {
+        margin-bottom: 2em;
+    }
+
+    .articles .articles-list {
+        flex-wrap: nowrap;
+    }
+
+    .articles .article-card {
+        margin: 0 5px;
+    }
 }
