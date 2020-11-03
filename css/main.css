@@ -515,8 +515,8 @@ footer.footer span {
         top: 0;
         right: 0;
         width: 50%;
-        height: 150%;
-        background-position: 50% -150px, 20% 0;
+        height: 120%;
+        background-position: 50% -150px, 0% -150px;
         background-size: 90%, cover;
         z-index: 10;
     }
