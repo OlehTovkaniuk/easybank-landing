@@ -607,4 +607,30 @@ footer.footer span {
     .articles .article-card {
         margin: 0 5px;
     }
+
+    /* Hover Effects */
+
+    header.header ul.menu-list li.menu-item {
+        position: relative;
+    }
+
+    header.header ul.menu-list li.menu-item::after {
+        content: "";
+        position: absolute;
+        bottom: -27px;
+        left: 0;
+        width: 0;
+        height: 3px;
+        background-image: linear-gradient(to right, var(--lime-green), var(--bright-cyan));
+        transition: 0.4s;
+    }
+    header.header ul.menu-list li.menu-item:hover::after {
+        width: 100%;
+    }
+
+
+    footer.footer li.link-item a:hover {
+        color: var(--lime-green);
+        transition: 0.3s;
+    }
 }
